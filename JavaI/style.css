@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 36px 26px;
+    background-color: #f4f6fb;
+    color: #102a43;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+body > * {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 34px;
+    margin-top: 0;
+    margin-bottom: 36px;
+    border-bottom: 3px solid #19766f;
+    padding-bottom: 34px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 28px;
+}
+
+a {
+    color: #1769aa;
+}
+
+ul {
+    padding-left: 40px;
+}
+
+body > p:last-child {
+    margin-top: 60px;
+}
