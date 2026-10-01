@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0 21px;
+    background-color: #f4f6fb;
+    color: #102a43;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+body > * {
+    max-width: 1032px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 34px;
+    margin-top: 18px;
+    margin-bottom: 28px;
+    padding-bottom: 36px;
+    border-bottom: 3px solid #19766f;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+a {
+    color: #1769aa;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #c7d3e0;
+    border-radius: 9px;
+    padding: 20px 16px;
+    min-height: 365px;
+}
+
+.card h2 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+
+.card > p {
+    margin-top: 8px;
+}
+
+.object {
+    width: 210px;
+    height: 210px;
+    background-color: #f0f2f5;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Çelësi */
+.key-circle {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    border: 12px solid #b76b00;
+    border-radius: 50%;
+    left: 28px;
+    top: 38px;
+}
+
+.key-line {
+    position: absolute;
+    width: 95px;
+    height: 14px;
+    background-color: #b76b00;
+    transform: rotate(42deg);
+    left: 85px;
+    top: 105px;
+}
+
+/* Filxhani */
+.cup-body {
+    position: absolute;
+    width: 100px;
+    height: 82px;
+    background-color: #2478ad;
+    left: 44px;
+    top: 55px;
+    border-radius: 0 0 55px 55px;
+}
+
+.cup-handle {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border: 14px solid #2478ad;
+    border-left: 0;
+    border-radius: 0 50% 50% 0;
+    left: 125px;
+    top: 59px;
+}
+
+/* Bileta */
+.ticket-shape {
+    position: absolute;
+    width: 160px;
+    height: 100px;
+    background-color: #f2bd5f;
+    border-radius: 12px;
+    left: 25px;
+    top: 55px;
+}
+
+.ticket-shape::after {
+    content: "";
+    position: absolute;
+    height: 92px;
+    border-left: 3px dashed #75510d;
+    right: 40px;
+    top: 4px;
+}
+
+details {
+    margin-top: 18px;
+}
+
+summary {
+    cursor: pointer;
+    color: #153d67;
+}
+
+.footer {
+    margin-top: 65px;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
