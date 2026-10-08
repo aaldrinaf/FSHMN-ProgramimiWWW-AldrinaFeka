@@ -1,0 +1,20 @@
+/* 
+  DIAGNOZA:
+  #poster është më specifik se .poster,
+  prandaj rregullat e #poster fitojnë në kaskadë.
+
+  width: 700px mund të shkaktojë overflow në ekrane të vogla.
+*/
+
+#poster {
+  color: #17263c;
+  background: #ffffff;
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.poster {
+  color: #17263c;
+  width: 100%;
+}
