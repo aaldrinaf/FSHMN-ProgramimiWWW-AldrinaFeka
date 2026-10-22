@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320">
+<defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#111b4b"/><stop offset="1" stop-color="#4666a8"/></linearGradient></defs>
+<rect width="800" height="320" fill="url(#g)"/>
+<g fill="#fff"><circle cx="100" cy="55" r="3"/><circle cx="200" cy="120" r="2"/><circle cx="330" cy="45" r="3"/><circle cx="520" cy="80" r="2"/><circle cx="690" cy="50" r="3"/><circle cx="740" cy="220" r="2"/><circle cx="410" cy="250" r="2"/><circle cx="90" cy="250" r="2"/></g>
+<circle cx="420" cy="160" r="76" fill="#f6c96b"/><circle cx="392" cy="137" r="18" fill="#e5a94c"/><circle cx="449" cy="185" r="24" fill="#e5a94c"/>
+<ellipse cx="420" cy="160" rx="130" ry="40" fill="none" stroke="#d9e8ff" stroke-width="5" transform="rotate(-18 420 160)"/>
+<circle cx="540" cy="118" r="11" fill="#d9e8ff"/><text x="36" y="285" fill="#fff" font-family="Arial,sans-serif" font-size="30" font-weight="700">ASTRONOMIA</text>
+</svg>
