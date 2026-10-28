@@ -1,0 +1,76 @@
+```html
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regjistrimi u pranua</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <p class="eyebrow">Programimi në WWW · Java V</p>
+        <h1>Regjistrimi u pranua!</h1>
+        <p class="intro">
+            Formulari u plotësua me sukses.
+        </p>
+    </header>
+
+    <main class="panel result">
+        <h2>Përmbledhja e regjistrimit</h2>
+
+        <p class="note">
+            Këto janë të dhënat që u dërguan nga formulari demonstrues.
+        </p>
+
+        <dl class="result-list">
+            <dt>Pseudonimi:</dt>
+            <dd id="pseudonimi">—</dd>
+
+            <dt>Email:</dt>
+            <dd id="email">—</dd>
+
+            <dt>Personat në grup:</dt>
+            <dd id="grupi">—</dd>
+
+            <dt>Kategoria:</dt>
+            <dd id="kategoria">—</dd>
+
+            <dt>Rregullat:</dt>
+            <dd id="rregullat">—</dd>
+        </dl>
+
+        <a class="back-link" href="index.html">
+            ← Kthehu te formulari
+        </a>
+    </main>
+
+    <footer>
+        Shembull mësimor · Vetëm demonstrim
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById("pseudonimi").textContent =
+            params.get("pseudonimi") || "Nuk u dha";
+
+        document.getElementById("email").textContent =
+            params.get("email") || "Nuk u dha";
+
+        document.getElementById("grupi").textContent =
+            params.get("grupi") || "Nuk u dha";
+
+        document.getElementById("kategoria").textContent =
+            params.get("kategoria") || "Nuk u zgjodh";
+
+        document.getElementById("rregullat").textContent =
+            params.get("rregullat") === "pranuar"
+                ? "Pranuar"
+                : "Nuk u konfirmuan";
+    </script>
+
+</body>
+</html>
+```

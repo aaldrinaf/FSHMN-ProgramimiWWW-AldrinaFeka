@@ -1,0 +1,263 @@
+```css
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ink: #17243a;
+  --muted: #59677b;
+  --paper: #f3f6fb;
+  --panel: #ffffff;
+  --line: #d7dfeb;
+  --accent: #2459a9;
+  --accent-dark: #17417f;
+  --soft-blue: #eaf1fc;
+  --warning-bg: #fff7df;
+  --warning-line: #e9cf7a;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0.5rem;
+  z-index: 10;
+  padding: 0.7rem 1rem;
+  color: white;
+  background: var(--accent-dark);
+  border-radius: 0.5rem;
+}
+
+.skip:focus {
+  left: 0.5rem;
+}
+
+.site-header {
+  padding: 2.5rem 1rem 2rem;
+  text-align: center;
+  color: white;
+  background: linear-gradient(130deg, #17345e, #2d65ad);
+}
+
+.site-header .eyebrow {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+h1 {
+  max-width: 850px;
+  margin: 0 auto 0.7rem;
+  line-height: 1.15;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  overflow-wrap: anywhere;
+}
+
+.intro {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #e7efff;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 1.25rem;
+  width: min(1100px, calc(100% - 2rem));
+  margin: 2rem auto;
+  align-items: start;
+}
+
+.panel {
+  min-width: 0;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgb(20 42 75 / 6%);
+}
+
+h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+p {
+  overflow-wrap: anywhere;
+}
+
+.note {
+  padding: 0.8rem 1rem;
+  background: var(--soft-blue);
+  border-left: 4px solid var(--accent);
+  border-radius: 0.35rem;
+  color: #273e60;
+}
+
+form {
+  display: grid;
+  gap: 1.1rem;
+  margin-top: 1.2rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+label,
+legend {
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  min-width: 0;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid #aebbd0;
+  border-radius: 0.5rem;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+}
+
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #e6a629;
+  outline-offset: 3px;
+}
+
+small {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-weight: 400;
+}
+
+.choice input {
+  margin-top: 0.4rem;
+  flex: 0 0 auto;
+  accent-color: var(--accent);
+}
+
+.rules {
+  font-weight: 600;
+}
+
+button {
+  justify-self: start;
+  max-width: 100%;
+  padding: 0.85rem 1.1rem;
+  border: 0;
+  border-radius: 0.55rem;
+  color: white;
+  background: var(--accent);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+.schedule > p {
+  color: var(--muted);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+caption {
+  padding: 0.5rem;
+  color: var(--muted);
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  padding: 0.7rem 0.55rem;
+  border: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+
+thead {
+  background: var(--soft-blue);
+}
+
+th {
+  font-weight: 700;
+}
+
+.privacy {
+  padding: 0.9rem;
+  border: 1px solid var(--warning-line);
+  border-radius: 0.6rem;
+  background: var(--warning-bg);
+  color: #5d4813;
+}
+
+footer {
+  padding: 1.25rem 1rem 2rem;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-header {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .layout {
+    width: calc(100% - 1rem);
+    margin: 0.75rem auto;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  table {
+    font-size: 0.88rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem 0.35rem;
+  }
+}
+```

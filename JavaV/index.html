@@ -1,0 +1,178 @@
+```html
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulari i misionit sekret</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Kalo te përmbajtja</a>
+
+  <header class="site-header">
+    <p class="eyebrow">Programimi në WWW · Java V</p>
+    <h1>Formulari i misionit sekret</h1>
+    <p class="intro">
+      Regjistro pseudonimin tënd dhe zgjidh një mision
+      për aktivitetin e klubit në kampus.
+    </p>
+  </header>
+
+  <main id="main" class="layout">
+    <section class="panel" aria-labelledby="form-title">
+      <h2 id="form-title">Regjistrimi i misionit</h2>
+
+      <p class="note">
+        Përdor vetëm të dhëna të sajuara. Ky formular është
+        demonstrim mësimor dhe nuk dërgon të dhëna në server.
+      </p>
+
+      <form action="pranuar.html" method="get">
+        <div class="field">
+          <label for="pseudonimi">
+            Pseudonimi (3–20 karaktere)
+          </label>
+          <input
+            id="pseudonimi"
+            name="pseudonimi"
+            type="text"
+            minlength="3"
+            maxlength="20"
+            required
+            autocomplete="off"
+            placeholder="p.sh. DhelpraBlu"
+          >
+          <small>
+            Përdor një pseudonim të sajuar, jo emrin tënd të vërtetë.
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email demonstrues</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            autocomplete="off"
+            placeholder="lojtari@example.com"
+          >
+          <small>
+            Shkruaj një adresë të sajuar, p.sh. me example.com.
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="grupi">
+            Numri i personave në grup (1–5)
+          </label>
+          <input
+            id="grupi"
+            name="grupi"
+            type="number"
+            min="1"
+            max="5"
+            step="1"
+            required
+            value="2"
+          >
+        </div>
+
+        <fieldset class="field">
+          <legend>Kategoria e misionit</legend>
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="kategoria"
+              value="Eksplorim"
+              required
+            >
+            Eksplorim i kampusit
+          </label>
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="kategoria"
+              value="Shkencë"
+            >
+            Eksperiment shkencor
+          </label>
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="kategoria"
+              value="Enigma"
+            >
+            Zgjidhje enigmash
+          </label>
+        </fieldset>
+
+        <div class="field">
+          <label class="choice rules">
+            <input
+              type="checkbox"
+              name="rregullat"
+              value="pranuar"
+              required
+            >
+            Pranoj rregullat e misionit dhe kuptoj se ky
+            është vetëm demonstrim.
+          </label>
+        </div>
+
+        <button type="submit">
+          Dërgo regjistrimin demonstrues
+        </button>
+      </form>
+    </section>
+
+    <aside class="panel schedule" aria-labelledby="schedule-title">
+      <h2 id="schedule-title">Orari i misioneve</h2>
+      <p>Zgjidh orarin që të përshtatet. Këto orare janë shembuj.</p>
+
+      <table>
+        <caption>Orari demonstrues i aktiviteteve</caption>
+        <thead>
+          <tr>
+            <th scope="col">Misioni</th>
+            <th scope="col">Ora</th>
+            <th scope="col">Vendi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Eksplorim</th>
+            <td>09:00</td>
+            <td>Oborri</td>
+          </tr>
+          <tr>
+            <th scope="row">Shkencë</th>
+            <td>11:00</td>
+            <td>Laboratori A</td>
+          </tr>
+          <tr>
+            <th scope="row">Enigma</th>
+            <td>13:00</td>
+            <td>Biblioteka</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="privacy">
+        <strong>Kujdes:</strong> formulari përdor metodën GET,
+        prandaj vlerat shfaqen në URL pas dërgimit.
+        Mos vendos të dhëna personale ose sekrete.
+      </p>
+    </aside>
+  </main>
+
+  <footer>
+    Shembull mësimor · Të dhëna të sajuara · Vetëm front end
+  </footer>
+</body>
+</html>
+```
