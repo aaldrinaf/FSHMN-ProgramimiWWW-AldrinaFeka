@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planifiko një pasdite me 20 euro</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="logjika.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Planifiko një pasdite me 20 euro</h1>
+        <p>Llogarit shpenzimet dhe kontrollo buxhetin tënd!</p>
+    </header>
+
+    <main>
+        <section class="kalkulatori">
+            <h2>Kalkulatori i buxhetit</h2>
+
+            <form id="forma">
+                <div class="fusha">
+                    <label for="cmimi">Çmimi për person (€):</label>
+                    <input
+                        type="number"
+                        id="cmimi"
+                        min="0"
+                        step="any"
+                        placeholder="Shembull: 4.50"
+                        required
+                    >
+                </div>
+
+                <div class="fusha">
+                    <label for="persona">Numri i personave:</label>
+                    <input
+                        type="number"
+                        id="persona"
+                        min="1"
+                        max="5"
+                        step="1"
+                        placeholder="1 deri në 5"
+                        required
+                    >
+                </div>
+
+                <div class="fusha">
+                    <label for="buxheti">Buxheti total (€):</label>
+                    <input
+                        type="number"
+                        id="buxheti"
+                        min="0"
+                        step="any"
+                        value="20"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Llogarit shpenzimet</button>
+            </form>
+
+            <div id="rezultati" class="rezultati" aria-live="polite">
+                <p>Plotëso të dhënat për të llogaritur shpenzimet.</p>
+            </div>
+        </section>
+
+        <section class="shembuj">
+            <h2>Shembuj të llogaritjes</h2>
+
+            <ul>
+                <li>4 € × 5 persona = 20 €</li>
+                <li>4.50 € × 5 persona = 22.50 €</li>
+                <li>0.10 € × 3 persona = 0.30 €</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projekt mësimor JavaVI | HTML, CSS dhe JavaScript</p>
+        <p>Të dhëna të sajuara – vetëm për demonstrim.</p>
+    </footer>
+
+</body>
+</html>
